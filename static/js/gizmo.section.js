@@ -1,12 +1,12 @@
 "use strict";
 
 /**
-* definiciÃ³n de un objeto GizmoSection
-* @param {json} jsonParams - Identificador del Object.
-* @param {json} jsonLayout - Text del botÃ³n.
-* @param {string} parent - Ã�cono del botÃ³n.
+*  GizmoSection object definition
+* @param {json} jsonParams - json with basic object definition.
+* @param {json} jsonLayout - json with the Layout definition.
+* @param {string} parent - Parent object id.
 * @example
-* let Seccion = new GizmoSection( {id:'Seccion', title:'Nombre de la Sección'} );
+* let Seccion = new GizmoSection( {id:'Seccion', title:'Section name'} );
 * Seccion.renderTo('divContainer'); */
 class GizmoSection extends GizmoBase {
     constructor( jsonParams , jsonLayout, parent ){
