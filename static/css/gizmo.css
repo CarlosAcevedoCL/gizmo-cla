@@ -1,0 +1,277 @@
+:root {
+    --gz-path-icons: './static/icons/';
+    --gz-path-images: './static/images/';
+
+    --gz-h-100: 100%;
+    --gz-h-75: 75%;
+    --gz-h-50: 50%;
+    --gz-h-25: 25%;
+
+    --gz-w-100: 100%;
+    --gz-w-75: 75%;
+    --gz-w-60: 60%;
+    --gz-w-50: 50%;
+    --gz-w-40: 40%;
+    --gz-w-33: 33%;
+    --gz-w-25: 25%;
+    --gz-spacer: 5px;
+
+    --gz-fnt-size-6: 6pt;
+    --gz-fnt-size-8: 8pt;
+    --gz-fnt-size-10: 10pt;
+    --gz-fnt-size-11: 11pt;
+    --gz-fnt-size-12: 12pt;
+    --gz-fnt-size-13: 13pt;
+    --gz-fnt-size-14: 14pt;
+    --gz-fnt-size-16: 16pt;
+    --gz-fnt-size-18: 18pt;
+
+    --gz-fnt-family-arial: Arial, Helvetica, sans-serif;
+    --gz-fnt-family-lucida: 'lucida grande', 'lucida sans', sans-serif;
+    --gz-fnt-family-segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --gz-fnt-family-franklin: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --gz-fnt-family-trebuchet: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --gz-fnt-family-georgia: Georgia, 'Times New Roman', Times, serif;
+    --gz-fnt-family-impact: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --gz-fnt-family-courier: 'Courier New', Courier, monospace;
+    --gz-fnt-family-gill: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --gz-fnt-family-verdana: Verdana, Geneva, Tahoma, sans-serif;
+    --gz-fnt-family-roman: 'Times New Roman', Times, serif;
+    --gz-fnt-family-candara: 'Candara', Courier, monospace, sans-serif;
+    --gz-fnt-family-console: 'Consolas', monospace, Courier, sans-serif;
+
+    /* GizmoBase */
+    --gz-base-width: 100%;
+    --gz-base-height: 100%;
+    --gz-base-padding: 5px;
+    --gz-base-margin: 5px;
+    --gz-base-color: #000;
+    --gz-base-bgcolor: #fff;
+    --gz-base-border: 1px solid #333;
+    --gz-base-fnt-size: 10pt;
+    --gz-base-fnt-weight: bolder;
+
+    /* GizmoPage */
+    --gz-page-width: 100%;
+    --gz-page-height: 100%;
+    --gz-page-padding: 5px;
+    --gz-page-margin: 5px;
+    --gz-page-color: #000;
+    --gz-page-bgcolor: silver;
+    --gz-page-border: 1px solid #ddd;
+
+    /* GizmoSection */
+    --gz-sec-width: 100%;
+    --gz-sec-height: 100%;
+    --gz-sec-padding: 5px;
+    --gz-sec-margin: 5px;
+    --gz-sec-color: #000;
+    --gz-sec-bgcolor: silver;
+    --gz-sec-border: 1px solid #ddd;
+    --gz-sec-fnt-size: 10pt;
+    --gz-sec-fnt-weight: bolder;
+
+    /* GizmoButton */
+    --gz-btn-width: 100px;
+    --gz-btn-height: 16px;
+    --gz-btn-padding: 3px;
+    --gz-btn-margin: 3px;
+    --gz-btn-color: #000;
+    --gz-btn-color-over: #444;
+    --gz-btn-bgcolor: silver;
+    --gz-btn-bgcolor-over: cornflowerblue;
+    --gz-btn-border: 1px solid #ddd;
+    --gz-btn-fnt-size: 11px;
+    --gz-btn-fnt-weight: bolder;
+    --gz-btn-bgimage: linear-gradient(white, rgb(222, 222, 222), white);
+}
+
+.GizmoBase {
+    width: var(--gz-w-100);
+    height: var(--gz-h-100);
+    color: var(--gz-base-color);
+    background-color: var(--gz-base-bgcolor);
+    /*border: var(--gz-base-border);*/
+    font-family: var(--gz-fnt-family-georgia);
+    font-size: var(--gz-fnt-size-11);
+    font-weight: normal;
+}
+
+.title {
+    width: calc(var(--gz-w-100) - var(--gz-base-border) - var(--gz-base-border) - var(--gz-base-padding) - var(--gz-base-padding));
+    height: 18px;
+    /*background-color: silver;*/
+    background-image: linear-gradient(180deg, white, #dedede, white);
+    padding: var(--gz-base-padding);
+    font-family: var(--gz-fnt-family-lucida);
+    font-size: 12pt;
+}
+
+.subtitle {
+    width: calc(var(--gz-w-100) - var(--gz-base-border) - var(--gz-base-border) - var(--gz-base-padding) - var(--gz-base-padding));
+    height: 18px;
+    background-color: lightyellow;
+    padding: var(--gz-base-padding);
+    font-family: var(--gz-fnt-family-lucida);
+    font-size: 10pt;
+}
+
+.body {
+    width: calc(var(--gz-w-100) - (var(--gz-base-border) * 2) - (var(--gz-base-padding) * 2));
+    height: 80%;
+    background-color: lightyellow;
+    padding: var(--gz-base-padding);
+}
+
+.x-buttons {
+    width: calc(var(--gz-w-100) - var(--gz-base-border) - var(--gz-base-border) - var(--gz-base-padding) - var(--gz-base-padding));
+    height: 18px;
+    background-color: inherit;
+    padding: var(--gz-base-padding);
+}
+
+.message {
+    width: calc(var(--gz-w-100) - var(--gz-base-border) - var(--gz-base-border) - var(--gz-base-padding) - var(--gz-base-padding));
+    height: 18px;
+    background-color: inherit;
+    padding: var(--gz-base-padding);
+}
+
+.footer {
+    width: calc(var(--gz-w-100) - var(--gz-base-border) - var(--gz-base-border) - var(--gz-base-padding) - var(--gz-base-padding));
+    height: 18px;
+    background-color: inherit;
+    padding: var(--gz-base-padding);
+}
+
+.GizmoPage {
+    color: var(--gz-page-color);
+    background-color: var(--gz-page-bgcolor);
+    font-family: var(--gz-fnt-family-georgia);
+    font-size: var(--gz-fnt-size-11);
+    width: var(--gz-w-100);
+    height: var(--gz-h-100);
+    margin: 0;
+    padding: 0;
+}
+
+.GizmoPageSuperior {
+    width: var(--gz-w-100);
+    height: 48px;
+    border: 1px dotted pink;
+    color: #333;
+    background: rgba(147, 206, 222, 1);
+    background: -moz-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(147, 206, 222, 1)), color-stop(41%, rgba(117, 189, 209, 1)), color-stop(100%, rgba(73, 165, 191, 1)));
+    background: -webkit-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+    background: -o-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+    background: linear-gradient(to bottom, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#93cede', endColorstr='#49a5bf', GradientType=0);
+}
+
+.GizmoPageBottom{
+    width: var(--gz-w-100);
+    height: 48px;
+    border: 1px dotted green;
+    color: #eee;
+    background: rgba(98,125,77,1);
+    background: -moz-linear-gradient(top, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(98,125,77,1)), color-stop(100%, rgba(31,59,8,1)));
+    background: -webkit-linear-gradient(top, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+    background: -o-linear-gradient(top, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+    background: -ms-linear-gradient(top, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+    background: linear-gradient(to bottom, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08', GradientType=0 );
+}
+
+.GizmoMenu {
+    width: var(--gz-w-100);
+    height: 28px;
+    border: 1px dotted purple;
+    color: #333;
+    background: rgba(243, 226, 199, 1);
+    background: -moz-linear-gradient(top, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 50%, rgba(182, 141, 76, 1) 51%, rgba(233, 212, 179, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(243, 226, 199, 1)), color-stop(50%, rgba(193, 158, 103, 1)), color-stop(51%, rgba(182, 141, 76, 1)), color-stop(100%, rgba(233, 212, 179, 1)));
+    background: -webkit-linear-gradient(top, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 50%, rgba(182, 141, 76, 1) 51%, rgba(233, 212, 179, 1) 100%);
+    background: -o-linear-gradient(top, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 50%, rgba(182, 141, 76, 1) 51%, rgba(233, 212, 179, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 50%, rgba(182, 141, 76, 1) 51%, rgba(233, 212, 179, 1) 100%);
+    background: linear-gradient(to bottom, rgba(243, 226, 199, 1) 0%, rgba(193, 158, 103, 1) 50%, rgba(182, 141, 76, 1) 51%, rgba(233, 212, 179, 1) 100%);
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=0 );*/
+}
+
+.GizmoSection {
+    color: var(--gz-sec-color);
+    background-color: var(--gz-sec-bgcolor);
+    font-family: var(--gz-fnt-family-georgia);
+    font-size: var(--gz-fnt-size-11);
+    width: var(--gz-w-100);
+    height: var(--gz-h-100);
+    border: var(--gz-sec-border);
+}
+
+.GizmoButtons {
+    display: flex;
+    align-content: flex-start;
+    padding-left: 32px;
+    height: 32px;
+    /*width:75%;*/
+    width: calc(var(--gz-w-75) - var(--gz-base-border) - var(--gz-base-border) - var(--gz-base-padding) - var(--gz-base-padding));
+    background-color: transparent;
+    /*padding: var(--gz-base-padding);*/
+}
+
+.GizmoButton {
+    color: var(--gz-btn-color);
+    width: var(--gz-btn-width);
+    height: var(--gz-btn-height);
+    border: var(--gz-btn-border);
+    padding: var(--gz-btn-padding);
+    margin: var(--gz-btn-margin);
+    font-family: var(--gz-fnt-family-lucida);
+    font-size: var(--gz-btn-fnt-size);
+    font-weight: normal;
+    cursor: default;
+
+    border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+
+    background-image: var(--gz-btn-bgimage);
+    /*
+        background: rgba(226,226,226,1);
+        background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(50%, rgba(219,219,219,1)), color-stop(51%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+        background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+        background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+        background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+        background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    */
+}
+
+.GizmoButton:hover {
+    color: var(--gz-btn-color-over);
+    border: 1px solid #eda;
+    padding: var(--gz-btn-padding);
+    cursor: pointer;
+
+    background: rgba(242, 246, 248, 1);
+    background: -moz-linear-gradient(top, rgba(242, 246, 248, 1) 0%, rgba(216, 225, 231, 1) 50%, rgba(181, 198, 208, 1) 51%, rgba(224, 239, 249, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242, 246, 248, 1)), color-stop(50%, rgba(216, 225, 231, 1)), color-stop(51%, rgba(181, 198, 208, 1)), color-stop(100%, rgba(224, 239, 249, 1)));
+    background: -webkit-linear-gradient(top, rgba(242, 246, 248, 1) 0%, rgba(216, 225, 231, 1) 50%, rgba(181, 198, 208, 1) 51%, rgba(224, 239, 249, 1) 100%);
+    background: -o-linear-gradient(top, rgba(242, 246, 248, 1) 0%, rgba(216, 225, 231, 1) 50%, rgba(181, 198, 208, 1) 51%, rgba(224, 239, 249, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(242, 246, 248, 1) 0%, rgba(216, 225, 231, 1) 50%, rgba(181, 198, 208, 1) 51%, rgba(224, 239, 249, 1) 100%);
+    background: linear-gradient(to bottom, rgba(242, 246, 248, 1) 0%, rgba(216, 225, 231, 1) 50%, rgba(181, 198, 208, 1) 51%, rgba(224, 239, 249, 1) 100%);
+    /*
+    -webkit-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+    background-url:static/images/kb0Zm.jpg?background=4ea6caff&noise=626262&density=15&opacity=15;
+    */
+}
+
+
+
+
+
+
+
+

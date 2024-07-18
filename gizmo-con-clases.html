@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gizmo 4 - Con Clases</title>
+    <link type="text/css" rel="stylesheet" href="./static/css/gizmo.css" />
+
+    <script src="./static/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="./static/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="./static/libs/toastr/toastr.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./static/libs/toastr/toastr.css" />
+    
+
+    <script src="./static/js/gizmo.utils.js"></script>
+    <script src="./static/js/gizmo.core.js"></script>
+    <script src="./static/js/gizmo.config.js"></script>
+    <script src="./static/js/gizmo.base.js"></script>
+    <script src="./static/js/gizmo.button.js"></script>
+    <script src="./static/js/gizmo.section.js"></script>
+    <script src="./static/js/gizmo.page.js"></script>
+</head>
+
+<body>
+
+    <div id="divContainer"></div>
+    <div id="divDebug"></div>
+
+    <script>
+        let Page = new GizmoPage({
+            id: 'Page',
+            title: 'Titulo de Página',
+            subtitle: 'Lorem lipsum',
+            message: 'Esto es un mensaje de la página'
+        });
+
+        Page.renderTo('divContainer');
+
+        Page.onInit = function () {
+            this.setButtons({
+                buttons: [
+                    {
+                        id: 'Procesar',
+                        text: 'Procesar',
+                        icon: 'search',
+                        action: 'Process()'
+                    },
+                    {
+                        id: 'Aprobar',
+                        text: 'Aprobar',
+                        icon: 'check',
+                        action: 'Aprobe()'
+                    },
+                    {
+                        id: 'Cancelar',
+                        text: 'Cancelar',
+                        icon: 'cancel',
+                        action: 'Cancel()'
+                    }
+                    ,
+                    {
+                        id: 'Sweet',
+                        text: 'SweetAlert',
+                        icon: 'warning',
+                        action: 'SweetAlert()'
+                    }
+                    ,
+                    {
+                        id: 'Toastr',
+                        text: 'Toastr',
+                        icon: 'info',
+                        action: 'Toaster("title", "message", "success");'
+                    }
+                ]
+            });
+            this.setMessage('esto es un mensaje');
+        }
+        Page.open('Titulo de Página');
+
+        /*
+        Page.setButtons(
+            {
+                buttons:[
+                    {id:'Procesar', text:'Procesar', icon:'search', action:'Process()'},
+                    {id:'Aprobar',  text:'Aprobar',  icon:'check',  action:'Aprobe()'},
+                    {id:'Cancelar', text:'Cancelar', icon:'cancel', action:'Cancel()'}
+                ]});
+
+        Page.show();
+        */
+
+        function SomeFunction() {
+            swal("¡ Some Action !");
+        }
+
+        function Process() {
+            //alert("¡ Process !");
+            let nombre = 'Emilia Acevedo';
+            let encoded = Gizmo.base64.encode(nombre);
+            //alert(encoded);
+            swal(encoded);
+        }
+
+        function Aprobe() {
+            //alert("¡ Aprobe !");
+            Gizmo.sayLog("Lorem Ipsum");
+        }
+
+        function Cancel() {
+            Gizmo.hideObject('Page.Container.message');
+        }
+
+        function SweetAlert() {
+            swal('Whats Up Dude?');
+        }
+
+        function Toaster(title, message, type) {
+            if (type == null)
+                type = 'info';
+
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-bottom-center",
+                "preventDuplicates": true,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+            toastr.success(message,type);
+            //toastr[type](message, title);
+
+            /*
+            toastr[type](message, title);
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-bottom-center",
+                "preventDuplicates": true,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            */
+        }
+    </script>
+
+</body>
+
+</html>
